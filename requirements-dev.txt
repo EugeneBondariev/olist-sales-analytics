@@ -1,0 +1,4 @@
+mypy==2.4.0
+ruff==0.17.0
+black==25.1.0
+pandas-stubs

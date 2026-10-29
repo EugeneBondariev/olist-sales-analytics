@@ -1,0 +1,32 @@
+# Data — never commit raw or processed data
+/data/
+/models/
+/logs/
+/reports/
+
+# Secrets
+.env
+
+# Editor / IDE
+.vscode/
+.claude/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+venv/
+env/

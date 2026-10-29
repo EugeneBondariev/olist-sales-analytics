@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "olist-sales-analytics"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.3",
+    "numpy>=2.3",
+    "matplotlib>=3.10",
+    "seaborn>=0.13",
+    "scikit-learn>=1.9",
+    "jupyter>=1.1",
+    "ipykernel>=6",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+addopts = "-q -m 'not e2e'"
+markers = ["e2e: real-browser smoke tests (deselected by default)"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+exclude = ["notebooks/"]
+
+[tool.mypy]
+ignore_missing_imports = true
+check_untyped_defs = true
+exclude = ["notebooks/"]
+
+[tool.black]
+line-length = 100
